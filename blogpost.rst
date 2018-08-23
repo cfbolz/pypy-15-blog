@@ -1,4 +1,4 @@
-The First 15 Years of PyPy – a Personal Retrospective
+The First 15 Years of PyPy — a Personal Retrospective
 ========================================================
 
 A few weeks ago I (=Carl Friedrich Bolz-Tereick) gave a keynote_ at ICOOOLPS in
@@ -23,6 +23,7 @@ PyPy is, so if this is your first interaction with it, welcome! I have tried to
 sprinkle links to earlier blog posts and papers into the writing, in case you
 want to dive deeper into some of the topics.
 
+.. contents::
 
 2003: Starting the Project
 ----------------------------
@@ -754,7 +755,7 @@ $$$ images
 
 
 Acknowledgements
-=================
+----------------------
 
 A lot of people helped me with this blog post. Tim Felgentreff made me give the
 keynote, which lead me to start collecting the material. Samuele Pedroni
