@@ -495,7 +495,7 @@ hardest parts of compilers in general and partial evaluation based systems in
 particular is the decision when and how much to inline, how much to specialize,
 as well as the decision when to split control flow paths. In the PE based JIT
 generator we never managed to control that question. Either the JIT would
-incline too much, leading to useless compilation of all kinds of unlikely error
+inline too much, leading to useless compilation of all kinds of unlikely error
 cases. Or it wouldn't inline enough, preventing necessary optimizations.
 
 Meta tracing solves this problem with a hammer, it doesn't make particularly
@@ -647,8 +647,8 @@ access them.
 Maybe this is well known in the VM and research community. However it's the main
 mistake that in my opinion every other Python JIT effort has made in the last 10
 years, where most projects said something along the lines of "we're not
-changing the existing CPython data structures at all, we'll just let LLVM in
-line enough C code of the runtime and then it will optimize all the overhead
+changing the existing CPython data structures at all, we'll just let LLVM
+inline enough C code of the runtime and then it will optimize all the overhead
 away". That never works very well.
 
 
