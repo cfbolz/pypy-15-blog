@@ -551,7 +551,8 @@ compiler optimizations for the meta-tracing JIT, such as:
 - dead code elimination
 - `loop invariant code motion`_ (taking LuaJIT's approach)
 - better heap optimizations
-- faster deoptimization (which is actually a bit of a mess in the meta-approach)
+- faster deoptimization (which is actually a bit of a mess in the
+  meta-approach, a lot of work on this was done by Samuele Pedroni)
 - and dealing more efficiently with Python frames objects and the
   features of Python's debugging facilities
 
