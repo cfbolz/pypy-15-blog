@@ -242,9 +242,17 @@ external users. And of course that turned out to be completely wrong later.
 That lack of modularity led to various problems that persist until today. The
 biggest one is that there is no separate compilation for RPython programs at
 all! You always need to compile all the parts of your VM together, which leads
-to infamously bad compilation times. Of course this mistake just got more and
-more costly to fix over time, and so it means that so far nobody has actually
-done it. Not thinking more carefully about RPython's design, particularly its
+to infamously bad compilation times.
+
+Also by not considering the modularity question we were never forced to fix
+some internal structuring issues of the RPython compiler itself that persists
+were various layers keep very not well-defined and porous interfaces between
+them as allowed by just having to work with all the program information in one heap, 
+making the compiler less approachable and maintainable than it maybe could be.
+
+Of course this mistake just got more and more costly to fix over time, 
+and so it means that so far nobody has actually done it. 
+Not thinking more carefully about RPython's design, particularly its
 modularity story, is in my opinion the biggest technical mistake the project
 did.
 
