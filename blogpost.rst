@@ -315,7 +315,9 @@ optimizing the result.
 
 The main new ideas of PyPy's partial-evaluation based JIT generator as opposed
 to earlier partial-evaluation approaches are the ideas of "promote" and the idea
-of "virtuals". Both of these techniques still remain in use today in PyPy. I'm
+of "virtuals". Both of these techniques had already been present (in a slightly
+less general form) in Psyco, and the goal was to keep using them in PyPy. Both
+of these techniques also still remain in use today in PyPy. I'm
 going on a slight technical diversion now, to give a high level explanation of
 what those ideas are for. 
 
