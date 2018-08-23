@@ -751,3 +751,12 @@ history, more than 350 of them. I'd like to thank all of them and the various
 roles they played. To the next 15 years!
 
 $$$ images
+
+
+Acknowledgements
+=================
+
+A lot of people helped me with this blog post. Tim Felgentreff made me give the
+keynote, which lead me to start collecting the material. Samuele Pedroni
+proofread the blog post. $$$ more
+All remaining errors are of course my own.
