@@ -32,7 +32,7 @@ where the name comes from. It also has an automatically generated JIT compiler,
 but I'm going to introduce that gradually over the rest of the blog post, so
 let's not worry about it too much yet. On the social level PyPy is an
 interesting mixture of a open source project, that sometimes had research done
-to it.
+in it.
 
 The project got started in late 2002 and early 2003. To set the stage, at that
 point Python was a significantly less popular language than it is today. `Python
@@ -141,7 +141,7 @@ The project therefore committed to being almost quirk-to-quirk compatible and to
 implement even the more obscure (and partially unnecessary) corner cases of
 CPython.
 
-All of these principles continue pretty much till today (There are a few places
+All of these principles continue pretty much still today (There are a few places
 where we had to deviate from being completely compatible, they are documented
 here__).
 
