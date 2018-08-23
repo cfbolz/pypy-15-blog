@@ -245,9 +245,9 @@ all! You always need to compile all the parts of your VM together, which leads
 to infamously bad compilation times.
 
 Also by not considering the modularity question we were never forced to fix
-some internal structuring issues of the RPython compiler itself that persists
-were various layers keep very not well-defined and porous interfaces between
-them as allowed by just having to work with all the program information in one heap, 
+some internal structuring issues of the RPython compiler itself.
+Various layers of the compiler keep very badly defined and porous interfaces between
+them. This was made possible by being able to work with all the program information in one heap,
 making the compiler less approachable and maintainable than it maybe could be.
 
 Of course this mistake just got more and more costly to fix over time, 
