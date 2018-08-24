@@ -5,7 +5,7 @@ A few weeks ago I (=Carl Friedrich Bolz-Tereick) gave a keynote_ at ICOOOLPS in
 Amsterdam with the above title. I was very happy to have been given that
 opportunity, since a number of our papers have been published at ICOOOLPS,
 including the very first one I published when I'd just started my PhD. I decided
-to turn the talk manuscript into a blog post, to make it reach a wider audience.
+to turn the talk manuscript into a (longish) blog post, to make it available to a wider audience.
 Note that this blog post describes my personal recollections and research, it is
 thus necessarily incomplete and skewed.
 
