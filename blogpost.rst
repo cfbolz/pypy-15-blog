@@ -764,5 +764,6 @@ Acknowledgements
 
 A lot of people helped me with this blog post. Tim Felgentreff made me give the
 keynote, which lead me to start collecting the material. Samuele Pedroni
-proofread the blog post. $$$ more
+gave essential early input when I just started planning the talk, and also gave
+feedback on the blog post. $$$ more
 All remaining errors are of course my own.
