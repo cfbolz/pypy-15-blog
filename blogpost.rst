@@ -683,32 +683,51 @@ Eurostars, we were about 4x faster than CPython on our set of benchmarks.
 .. __: https://morepypy.blogspot.com/2010/11/snake-which-bites-its-tail-pypy-jitting.html
 
 
-2012-2015: Engineering and Incremental Progress
+2012-2017: Engineering and Incremental Progress
 --------------------------------------------------
 
 2012 the Eurostars project was finished and PyPy reverted yet another time back
-to be an open source project. From then on, we've had only smaller sources of
-funding to improve PyPy itself, we received some crowd funding and grants from
-companies to implement various specific features. So in the next couple of years
+to be an open source project. From then on, we've had a more diverse set of
+sources of funding: we received some crowd funding via the `Software Freedom
+Conservancy`_ and contracts of various sizes from companies to implement various
+specific features, often handled by Baroque Software. So in the next couple of
+years
 we revamped various parts of the VM. We improved the GC in major_ ways. We
 optimized the implementation of the JIT compiler to improve warmup_ times_. We
 implemented backends for various CPU architectures (including PowerPC_ and
-s390x_). And we increased
-compatibility with CPython by writing and painstakingly improving an emulation
-layer to make it possible to run `CPython C-extension modules`_.
+s390x_). We tried to reduce the number of performance cliffs and make the JIT
+useful in a broader set of cases. And we pushed quite significantly to be more
+compatible with CPython, particularly the Python 3 line as well as extenion
+module support.
 
+.. _`Software Freedom Conservancy`: https://sfconservancy.org/
 .. _major: https://morepypy.blogspot.com/2013/10/incremental-garbage-collector-in-pypy.html
 .. _warmup: https://morepypy.blogspot.com/2015/10/pypy-memory-and-warmup-improvements-2.html
 .. _times: https://morepypy.blogspot.com/2016/04/warmup-improvements-more-efficient.html
 .. _PowerPC: https://morepypy.blogspot.com/2015/10/powerpc-backend-for-jit.html
 .. _s390x: https://morepypy.blogspot.com/2016/04/pypy-enterprise-edition.html
-.. _`CPython C-extension modules`: https://morepypy.blogspot.com/2010/04/using-cpython-extension-modules-with.html
 
+CPyExt
+---------
+
+Another very important strand of work that took a lot of effort in recent years
+was CPyExt. One of the main blockers of PyPy adoption had always been the fact
+that a lot of people need specific C-extension modules at least in some parts of
+their program, and telling them to reimplement everything in Python is just not
+a practical solution. Therefore we worked on CPyExt, an emulation layer  to make
+it possible to run `CPython C-extension modules`_ in PyPy. Doing that was a very
+painful process, since the CPython extension API leaks a lot of CPython
+implementation details, so we had to painstakingly emulate all of these details
+to make it possible to run extensions. That this works at all remains completely
+amazing to me! But nowadays CPyExt is even getting quite good, a lot of the big
+numerical libraries such as Numpy and Pandas are now supported.
+
+.. _`CPython C-extension modules`: https://morepypy.blogspot.com/2010/04/using-cpython-extension-modules-with.html
 
 Python 3
 ---------
 
-These kind of incremental improvements sort of keep happening, but the main
+Another main
 focus of the last couple of years has been to catch up with the CPython 3 line.
 Originally we had ignored Python 3 for a little bit too long, and were trailing
 several versions behind. In 2016 and 2017 we had a grant_ from the Mozilla open
