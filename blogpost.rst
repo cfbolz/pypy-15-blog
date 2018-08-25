@@ -675,7 +675,9 @@ JIT Status 2011
 So, the Eurostars project has ended, what's the status of the JIT? Well, it
 seems this meta-tracing stuff really works! We finally started actually
 believing in it, when we reached the point in 2010 where self-hosting PyPy was
-actually faster__ than bootstrapping the VM on CPython. And at the end of
+actually faster__ than bootstrapping the VM on CPython. Speeding up the
+bootstrapping process is something that Psyco never managed at all, so we
+considered this a quite important achievement. At the end of
 Eurostars, we were about 4x faster than CPython on our set of benchmarks.
 
 .. __: https://morepypy.blogspot.com/2010/11/snake-which-bites-its-tail-pypy-jitting.html
