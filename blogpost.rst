@@ -551,7 +551,7 @@ compiler optimizations for the meta-tracing JIT, such as:
 
 - constant folding
 - dead code elimination
-- `loop invariant code motion`_ (taking LuaJIT's approach)
+- `loop invariant code motion`_ (taking LuaJIT's approach, mostly implemented by Håkan Ardö)
 - better heap optimizations
 - faster deoptimization (which is actually a bit of a mess in the
   meta-approach, a lot of work on this was done by Samuele Pedroni)
@@ -685,7 +685,8 @@ to be an open source project. From then on, we've had only smaller sources of
 funding to improve PyPy itself, we received some crowd funding and grants from
 companies to implement various specific features. So in the next couple of years
 we revamped various parts of the VM. We improved the GC in major_ ways. We
-optimized the implementation of the JIT compiler to improve warmup_ times_. We
+optimized the implementation of the JIT compiler to improve warmup_ times_
+(that work was pushed forward by Maciej Fijałkowski significantly). We
 implemented backends for various CPU architectures (including PowerPC_ and
 s390x_). And we increased
 compatibility with CPython by writing and painstakingly improving an emulation
