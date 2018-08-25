@@ -7,7 +7,7 @@ opportunity, since a number of our papers have been published at ICOOOLPS,
 including the very first one I published when I'd just started my PhD. I decided
 to turn the talk manuscript into a (longish) blog post, to make it available to a wider audience.
 Note that this blog post describes my personal recollections and research, it is
-thus necessarily incomplete and skewed.
+thus necessarily incomplete and coloured by my own experiences.
 
 .. _keynote: https://conf.researchr.org/event/ecoop-issta-2018/icooolps-2018-papers-tbd-15-years-of-pypy-a-retrospective
 
@@ -22,6 +22,12 @@ The post does not make too many assumptions about any prior knowledge of what
 PyPy is, so if this is your first interaction with it, welcome! I have tried to
 sprinkle links to earlier blog posts and papers into the writing, in case you
 want to dive deeper into some of the topics.
+
+As a disclaimer, in this post I am going to mostly focus on ideas, and not
+explain who had or implemented them. A huge amount of people contributed to the
+design, the implementation, the funding and the organization of PyPy over the
+years, and it would be impossible to do them all justice.
+
 
 .. contents::
 
@@ -71,11 +77,6 @@ executable explanation of how Python works, free of the low level details of
 CPython. But pretty soon there were then also plans for how the virtual machine
 (VM) could be bootstrapped to be runnable without an existing Python
 implementation, but I'll get to that further down.
-
-(As a disclaimer, in this post I am going to mostly focus on ideas, and not
-explain who had or implemented them. A huge amount of people contributed to the
-design, the implementation, the funding and the organization of PyPy over the
-years, and it would be impossible to do them all justice.)
 
 
 2003: Implementing the Interpreter
