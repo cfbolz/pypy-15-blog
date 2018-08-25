@@ -165,7 +165,7 @@ Particularly also the sprints became expensive given that those were just
 volunteers doing this as a kind of weird hobby. Therefore a couple of people of
 the project got together to apply for an EU grant in the framework programme 6
 to solve these money problems. In mid-2004 that application proved to be
-successful. And so the project got a grant of a couple of a million Euro for
+successful. And so the project got a grant of a 1.3 million Euro for
 two years to be able to employ some of the core developers and to make it
 possible for them work on the project full time. The EU grant went to seven
 small-to-medium companies and Uni Düsseldorf. The budget also contained money to
