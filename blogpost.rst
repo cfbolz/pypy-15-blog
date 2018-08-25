@@ -690,7 +690,9 @@ optimized the implementation of the JIT compiler to improve warmup_ times_
 implemented backends for various CPU architectures (including PowerPC_ and
 s390x_). And we increased
 compatibility with CPython by writing and painstakingly improving an emulation
-layer to make it possible to run `CPython C-extension modules`_.
+layer to make it possible to run `CPython C-extension modules`_ (this was
+started Amaury Forgeot d'Arc and pushed significantly in the last few years by
+Matti Picus).
 
 .. _major: https://morepypy.blogspot.com/2013/10/incremental-garbage-collector-in-pypy.html
 .. _warmup: https://morepypy.blogspot.com/2015/10/pypy-memory-and-warmup-improvements-2.html
