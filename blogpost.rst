@@ -42,7 +42,7 @@ point Python was a significantly less popular language than it is today. `Python
 .. _`Python 2.2`: https://www.python.org/download/releases/2.2/
 
 In fall 2002 the PyPy project was started by a number of Python programmers on a
-mailing list (including Holger Krekel, Christian Tismer, Armin Rigo) who said
+mailing list who said
 something like (I am exaggerating somewhat) "Python is the greatest most
 wonderful most perfect language ever, we should use it for absolutely
 everything. Well, what aren't we using it for? The Python virtual machine itself
@@ -71,6 +71,11 @@ executable explanation of how Python works, free of the low level details of
 CPython. But pretty soon there were then also plans for how the virtual machine
 (VM) could be bootstrapped to be runnable without an existing Python
 implementation, but I'll get to that further down.
+
+(As a disclaimer, in this post I am going to mostly focus on ideas, and not
+explain who had or implemented them. A huge amount of people contributed to the
+design, the implementation, the funding and the organization of PyPy over the
+years, and it would be impossible to do them all justice.)
 
 
 2003: Implementing the Interpreter
@@ -158,9 +163,7 @@ just open source volunteers working on the project in their spare time.
 Particularly also the sprints became expensive given that those were just
 volunteers doing this as a kind of weird hobby. Therefore a couple of people of
 the project got together to apply for an EU grant in the framework programme 6
-to solve these money problems (this was suggested and pushed by Jacob Halén and
-Laura Creighton, as well as Anders Lehmann). In mid-2004 that application
-proved to be
+to solve these money problems. In mid-2004 that application proved to be
 successful. And so the project got a grant of a couple of a million Euro for
 two years to be able to employ some of the core developers and to make it
 possible for them work on the project full time. The EU grant went to seven
@@ -551,10 +554,10 @@ compiler optimizations for the meta-tracing JIT, such as:
 
 - constant folding
 - dead code elimination
-- `loop invariant code motion`_ (taking LuaJIT's approach, mostly implemented by Håkan Ardö)
+- `loop invariant code motion`_ (taking LuaJIT's approach)
 - better heap optimizations
 - faster deoptimization (which is actually a bit of a mess in the
-  meta-approach, a lot of work on this was done by Samuele Pedroni)
+  meta-approach)
 - and dealing more efficiently with Python frames objects and the
   features of Python's debugging facilities
 
@@ -685,14 +688,11 @@ to be an open source project. From then on, we've had only smaller sources of
 funding to improve PyPy itself, we received some crowd funding and grants from
 companies to implement various specific features. So in the next couple of years
 we revamped various parts of the VM. We improved the GC in major_ ways. We
-optimized the implementation of the JIT compiler to improve warmup_ times_
-(that work was pushed forward by Maciej Fijałkowski significantly). We
+optimized the implementation of the JIT compiler to improve warmup_ times_. We
 implemented backends for various CPU architectures (including PowerPC_ and
 s390x_). And we increased
 compatibility with CPython by writing and painstakingly improving an emulation
-layer to make it possible to run `CPython C-extension modules`_ (this was
-started Amaury Forgeot d'Arc and pushed significantly in the last few years by
-Matti Picus).
+layer to make it possible to run `CPython C-extension modules`_.
 
 .. _major: https://morepypy.blogspot.com/2013/10/incremental-garbage-collector-in-pypy.html
 .. _warmup: https://morepypy.blogspot.com/2015/10/pypy-memory-and-warmup-improvements-2.html
@@ -750,7 +750,6 @@ high-level ones that allocate continuation objects all the time, and so on. This
 shows that RPython also gives you a lot of freedom in deciding how you want to
 structure the interpreter and that it can be applied to languages of quite
 different paradigms.
-
 
 I'll end with a list of the people that have contributed code to PyPy over its
 history, more than 350 of them. I'd like to thank all of them and the various
