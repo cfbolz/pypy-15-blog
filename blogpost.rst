@@ -465,16 +465,18 @@ here’s a list of them.
   much machine code. Only later, when execution went down one of the not yet
   compiled paths would it continue compiling more code.
 
-- The fourth JIT generator was a pretty strange prototype, a runtime partial
-  evaluator for Prolog, to experiment with various specialization trade-offs. It
+- The fourth JIT generator was a pretty strange prototype, a `runtime partial
+  evaluator for Prolog`_, to experiment with various specialization trade-offs. It
   had an approach that we gave a not at all humble name, called "perfect
   specialization". $$$
+
 
 - The fifth JIT generator is the one that we are still using today. Instead of
   generating a method-based JIT compiler from our interpreter we switched to
   generating a tracing JIT compiler. Tracing JIT compilers were sort of the
   latest fashion at the time, at least for a little while.
 
+.. _`runtime partial evaluator for Prolog`: https://pdfs.semanticscholar.org/db2d/0542c7791ee6f29a9f35e3181a186866f881.pdf
 
 2009: Meta-Tracing
 ----------------------
