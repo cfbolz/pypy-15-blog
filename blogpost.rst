@@ -388,8 +388,8 @@ CPython, and most of the time Psyco still beats it. On the one hand, this is
 still an amazing achievement! It's arguably the biggest application of partial
 evaluation at this point in time! On the other hand, it was still quite 
 disappointing in practice, particularly since some of us had believed at the
-time that it should have been possible to surpass the speed of Psyco with the
-approach.
+time that it should have been possible to reach and then surpass the speed of
+Psyco with the approach.
 
 .. _here: http://doc.pypy.org/en/latest/index-report.html
 
