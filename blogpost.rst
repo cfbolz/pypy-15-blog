@@ -232,6 +232,13 @@ managed to run an incredibly complex program, something like ``6 * 7``. That
 first bootstrapped version was really really slow, a couple of hundred times
 slower than CPython.
 
+
+.. XXX antocuni: are you sure this is correct? I have a vague remembering that
+   this is something which it happened at the first or second sprint I
+   participated to (so, after June 2006). But it is entirely possible that I
+   remember wrongly and what happenened is that someone of you told me about
+   this story at that time :)
+
 $$ image champagne
 
 RPython's Modularity Problems
@@ -457,6 +464,8 @@ here’s a list of them.
   the first one, but had a meta-interpreter based architecture, to make it more
   flexible and easier to experiment with.
 
+.. XXX antocuni: please add the words "rainbow interpreter" to the previous sentence! :)
+
 - The third one was an experiment based on the second one which changed
   compilation strategy. While the previous two had compiled many control flow
   paths of the currently compiled function eagerly, that third JIT was sort of
@@ -582,6 +591,12 @@ next years, to keep continually improving performance.
 Continuous Integration
 -----------------------
 
+.. XXX antocuni: I think this section should go much earlier: after all, pypy
+   was TDD since the beginning, and AFAIK the buildbot was already there when
+   I started. It is definitely more impressive to tell people that we did
+   continuous integration/automated testing in 2005, when most hadn't even
+   heard about it.
+
 This actually leads me to something else that I'd say we learned, which is that
 continuous integration is really awesome, and completely transformative to have
 for a project. This is not a particularly surprising insight nowadays in the
@@ -702,6 +717,16 @@ useful in a broader set of cases. And we pushed quite significantly to be more
 compatible with CPython, particularly the Python 3 line as well as extenion
 module support.
 
+.. XXX antocuni: other things we did were to "bring pypy to the real world";
+   some of the following tasks were done even before 2012, so not sure if it's
+   better to make a dedicated paragraph to it, but it includes things like:
+   virtualenv, ctypes, setuptools/distutils, and probably others.
+
+.. XXX antocuni: following the previous paragraph, we should probably say that
+   this is more or less the time when people actually started to use PyPy in
+   the real industry: e.g., Gambit uses PyPy since late 2012, I'm sure we can
+   find other examples if needed.
+
 .. _`Software Freedom Conservancy`: https://sfconservancy.org/
 .. _major: https://morepypy.blogspot.com/2013/10/incremental-garbage-collector-in-pypy.html
 .. _warmup: https://morepypy.blogspot.com/2015/10/pypy-memory-and-warmup-improvements-2.html
@@ -726,6 +751,16 @@ numerical libraries such as Numpy and Pandas are now supported.
 
 .. _`CPython C-extension modules`: https://morepypy.blogspot.com/2010/04/using-cpython-extension-modules-with.html
 
+.. XXX antocuni: this is probably worth to be expanded more: if RPython was
+   the biggest technical mistake, (the lack of) cpyext was probably our
+   biggest strategic mistake: I still remember when we were convinced that the
+   best way was to implement numpypy, which clearly failed. Personally I also
+   think that, assuming good py3k support, cpyext is the last bit which PyPy
+   misses to gain very broad adoption, so we should also say that it's still
+   an on-going process. If you want, I can try to write this kind of expanded
+   section
+
+
 Python 3
 ---------
 
@@ -739,6 +774,13 @@ have to look into 3.7 in the near future.
 
 .. _grant: https://morepypy.blogspot.com/2016/08/pypy-gets-funding-from-mozilla-for.html
 
+.. XXX antocuni: I'd add one more section: "PyPy spinoffs": during the years
+   we started various sub-projects which became important on their own; the
+   two most important ones are obviously pytest (although I'm not sure it
+   counts as a "spinoff") and CFFI, but the list includes at least also
+   vmprof, revdb (and pdb++ :))
+
+   
 
 Incentives of OSS compared to Academia
 ------------------------------------------------------
@@ -780,6 +822,14 @@ history, more than 350 of them. I'd like to thank all of them and the various
 roles they played. To the next 15 years!
 
 $$$ images
+
+.. XXX antocuni: what about a sort of "timeline chart"? On the X axis, the
+   time; on the Y axis, the committers; then, we draw one point for each
+   commit (or maybe bigger points for many commits in the same day/week/month
+   or so). Or, alternatively: for each committer, one straight line which goes
+   from the first to the last commit. Both versions should do a good job at
+   showing that we had different bursts of activity (especially during the
+   founding periods)
 
 
 Acknowledgements
