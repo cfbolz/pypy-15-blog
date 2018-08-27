@@ -789,6 +789,8 @@ A lot of people helped me with this blog post. Tim Felgentreff made me give the
 keynote, which lead me to start collecting the material. Samuele Pedroni
 gave essential early input when I just started planning the talk, and also gave
 feedback on the blog post. Maciej Fijałkowski gave me feedback on the post, in
-particular important insight about the more recent years of the project. $$$
-more
+particular important insight about the more recent years of the project. Armin
+Rigo discussed the talk slides with me, and provided details about the early
+expectations about the first JIT's hoped-for performance
+$$$ more
 All remaining errors are of course my own.
