@@ -386,9 +386,10 @@ to generate many megabytes of machine code even for small Python programs. While
 it's always faster than PyPy without JIT, it's only sometimes faster than
 CPython, and most of the time Psyco still beats it. On the one hand, this is
 still an amazing achievement! It's arguably the biggest application of partial
-evaluation at this point in time! On the other hand, it's still quite 
-disappointing in practice, particularly in the context of our assumption that
-it should have been possible to surpass the speed of Psyco with the approach.
+evaluation at this point in time! On the other hand, it was still quite 
+disappointing in practice, particularly since some of us had believed at the
+time that it should have been possible to surpass the speed of Psyco with the
+approach.
 
 .. _here: http://doc.pypy.org/en/latest/index-report.html
 
@@ -469,7 +470,6 @@ here’s a list of them.
   evaluator for Prolog`_, to experiment with various specialization trade-offs. It
   had an approach that we gave a not at all humble name, called "perfect
   specialization". $$$
-
 
 - The fifth JIT generator is the one that we are still using today. Instead of
   generating a method-based JIT compiler from our interpreter we switched to
