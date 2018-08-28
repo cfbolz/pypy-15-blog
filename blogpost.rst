@@ -725,11 +725,12 @@ compatible with CPython, particularly the Python 3 line as well as extenion
 module support. Other compatibility improvements we did was making sure that
 virtualenv `works with PyPy`_, better support for distutils and setuptools and
 similar improvements. The continually improving performance as well better
-compatibility with the ecosystem tools led to the first few users__ of PyPy in
+compatibility with the ecosystem tools led to the `first few`__ users__ of PyPy in
 industry__.
 
 .. __: https://morepypy.blogspot.com/2014/10/couchbase-contribution-to-pypy.html
 .. __: https://baroquesoftware.com/blog#interview-with-roberto_de_ioris
+.. __: https://baroquesoftware.com/blog#magnetic
 .. _`works with PyPy`: https://morepypy.blogspot.com/2010/08/using-virtualenv-with-pypy.html
 
 CPyExt
@@ -745,9 +746,10 @@ painful process, since the CPython extension API leaks a lot of CPython
 implementation details, so we had to painstakingly emulate all of these details
 to make it possible to run extensions. That this works at all remains completely
 amazing to me! But nowadays CPyExt is even getting quite good, a lot of the big
-numerical libraries such as Numpy and Pandas are now supported.
+numerical libraries such as Numpy and Pandas__ are now supported.
 
 .. _`CPython C-extension modules`: https://morepypy.blogspot.com/2010/04/using-cpython-extension-modules-with.html
+.. __: https://morepypy.blogspot.com/2017/10/pypy-v59-released-now-supports-pandas.html
 
 .. XXX antocuni: this is probably worth to be expanded more: if RPython was
    the biggest technical mistake, (the lack of) cpyext was probably our
