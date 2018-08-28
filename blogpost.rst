@@ -751,14 +751,17 @@ numerical libraries such as Numpy and Pandas__ are now supported.
 .. _`CPython C-extension modules`: https://morepypy.blogspot.com/2010/04/using-cpython-extension-modules-with.html
 .. __: https://morepypy.blogspot.com/2017/10/pypy-v59-released-now-supports-pandas.html
 
-.. XXX antocuni: this is probably worth to be expanded more: if RPython was
-   the biggest technical mistake, (the lack of) cpyext was probably our
-   biggest strategic mistake: I still remember when we were convinced that the
-   best way was to implement numpypy, which clearly failed. Personally I also
-   think that, assuming good py3k support, cpyext is the last bit which PyPy
-   misses to gain very broad adoption, so we should also say that it's still
-   an on-going process. If you want, I can try to write this kind of expanded
-   section
+Not thinking about C-extension module emulation earlier in the project history
+was a pretty bad strategic mistake. It had been clear for a long time that
+getting people to just stop using all their C-extension modules was never going
+to work, despite our efforts to give them alternatives, such as cffi_. So we
+should have thought of a story for all the existing C-extension modules earlier
+in the project. Not starting CPyExt earlier was mostly a failure of our
+imagination (and maybe a too high pain threshold): We didn't believe this kind
+of emulation was going to be practical, until somebody `went and tried it`__.
+
+.. _cffi: https://cffi.readthedocs.io/en/latest/
+.. __: https://bitbucket.org/pypy/pypy/commits/e30d69f4dedc
 
 
 Python 3
