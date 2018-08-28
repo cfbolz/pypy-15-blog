@@ -589,12 +589,6 @@ next years, to keep continually improving performance.
 Continuous Integration
 -----------------------
 
-.. XXX antocuni: I think this section should go much earlier: after all, pypy
-   was TDD since the beginning, and AFAIK the buildbot was already there when
-   I started. It is definitely more impressive to tell people that we did
-   continuous integration/automated testing in 2005, when most hadn't even
-   heard about it.
-
 This actually leads me to something else that I'd say we learned, which is that
 continuous integration is really awesome, and completely transformative to have
 for a project. This is not a particularly surprising insight nowadays in the
@@ -777,13 +771,6 @@ have to look into 3.7 in the near future.
 
 .. _grant: https://morepypy.blogspot.com/2016/08/pypy-gets-funding-from-mozilla-for.html
 
-.. XXX antocuni: I'd add one more section: "PyPy spinoffs": during the years
-   we started various sub-projects which became important on their own; the
-   two most important ones are obviously pytest (although I'm not sure it
-   counts as a "spinoff") and CFFI, but the list includes at least also
-   vmprof, revdb (and pdb++ :))
-
-   
 
 Incentives of OSS compared to Academia
 ------------------------------------------------------
