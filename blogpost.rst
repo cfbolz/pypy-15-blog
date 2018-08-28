@@ -457,11 +457,13 @@ here’s a list of them.
 
 - The second JIT generator we started working on in 2008 behaved exactly like
   the first one, but had a meta-interpreter based architecture, to make it more
-  flexible and easier to experiment with.
+  flexible and easier to experiment with. The meta-interpreter was called
+  the "rainbow interpreter", and in general the JIT is an area where we went
+  somewhat overboard with borderline silly terminology, with notable
+  occurrences of "timeshifter", "blackhole interpreter" etc.
 
-.. XXX antocuni: please add the words "rainbow interpreter" to the previous sentence! :)
-
-- The third one was an experiment based on the second one which changed
+- The third JIT generator was an experiment based on the second one which
+  changed
   compilation strategy. While the previous two had compiled many control flow
   paths of the currently compiled function eagerly, that third JIT was sort of
   maximally lazy and stopped compilation at every control flow split to avoid
@@ -473,7 +475,7 @@ here’s a list of them.
 - The fourth JIT generator was a pretty strange prototype, a `runtime partial
   evaluator for Prolog`_, to experiment with various specialization trade-offs. It
   had an approach that we gave a not at all humble name, called "perfect
-  specialization". $$$
+  specialization".
 
 - The fifth JIT generator is the one that we are still using today. Instead of
   generating a method-based JIT compiler from our interpreter we switched to
@@ -561,7 +563,7 @@ compiler optimizations for the meta-tracing JIT, such as:
 
 - constant folding
 - dead code elimination
-- `loop invariant code motion`_ (taking LuaJIT's approach)
+- `loop invariant code motion`_ (using `LuaJIT's approach`_)
 - better heap optimizations
 - faster deoptimization (which is actually a bit of a mess in the
   meta-approach)
@@ -569,6 +571,7 @@ compiler optimizations for the meta-tracing JIT, such as:
   features of Python's debugging facilities
 
 .. _`loop invariant code motion`: https://bitbucket.org/pypy/extradoc/raw/default/talk/dls2012/dls04-ardo.pdf
+.. _`LuaJIT's approach`: http://lua-users.org/lists/lua-l/2009-11/msg00089.html
 
 
 2010: speed.pypy.org
@@ -708,19 +711,7 @@ we revamped various parts of the VM. We improved the GC in major_ ways. We
 optimized the implementation of the JIT compiler to improve warmup_ times_. We
 implemented backends for various CPU architectures (including PowerPC_ and
 s390x_). We tried to reduce the number of performance cliffs and make the JIT
-useful in a broader set of cases. And we pushed quite significantly to be more
-compatible with CPython, particularly the Python 3 line as well as extenion
-module support.
-
-.. XXX antocuni: other things we did were to "bring pypy to the real world";
-   some of the following tasks were done even before 2012, so not sure if it's
-   better to make a dedicated paragraph to it, but it includes things like:
-   virtualenv, ctypes, setuptools/distutils, and probably others.
-
-.. XXX antocuni: following the previous paragraph, we should probably say that
-   this is more or less the time when people actually started to use PyPy in
-   the real industry: e.g., Gambit uses PyPy since late 2012, I'm sure we can
-   find other examples if needed.
+useful in a broader set of cases.
 
 .. _`Software Freedom Conservancy`: https://sfconservancy.org/
 .. _major: https://morepypy.blogspot.com/2013/10/incremental-garbage-collector-in-pypy.html
@@ -728,6 +719,18 @@ module support.
 .. _times: https://morepypy.blogspot.com/2016/04/warmup-improvements-more-efficient.html
 .. _PowerPC: https://morepypy.blogspot.com/2015/10/powerpc-backend-for-jit.html
 .. _s390x: https://morepypy.blogspot.com/2016/04/pypy-enterprise-edition.html
+
+Another strand of work was to push quite significantly to be more
+compatible with CPython, particularly the Python 3 line as well as extenion
+module support. Other compatibility improvements we did was making sure that
+virtualenv `works with PyPy`_, better support for distutils and setuptools and
+similar improvements. The continually improving performance as well better
+compatibility with the ecosystem tools led to the first few users__ of PyPy in
+industry__.
+
+.. __: https://morepypy.blogspot.com/2014/10/couchbase-contribution-to-pypy.html
+.. __: https://baroquesoftware.com/blog#interview-with-roberto_de_ioris
+.. _`works with PyPy`: https://morepypy.blogspot.com/2010/08/using-virtualenv-with-pypy.html
 
 CPyExt
 ---------
