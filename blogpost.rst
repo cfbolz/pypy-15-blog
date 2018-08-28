@@ -831,6 +831,7 @@ gave essential early input when I just started planning the talk, and also gave
 feedback on the blog post. Maciej Fijałkowski gave me feedback on the post, in
 particular important insight about the more recent years of the project. Armin
 Rigo discussed the talk slides with me, and provided details about the early
-expectations about the first JIT's hoped-for performance
+expectations about the first JIT's hoped-for performance. Anto Cuni gave
+substantial feedback and many very helpful suggestions for the blog post.
 $$$ more
 All remaining errors are of course my own.
