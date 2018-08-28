@@ -223,7 +223,7 @@ the PyPy Python interpreter. This is also roughly the time that I joined the
 project as a volunteer.
 
 And at the second sprint I went to, in July 2005, two and a half years after the
-project got started, we managed to bootstrap the PyPy interpreter to C for the
+project got started, we managed to bootstrap__ the PyPy interpreter to C for the
 first time. And then when we ran the compiled program, it of course immediately
 segfaulted. The reason for that was that the C backend had turned characters
 into signed chars in C, while the rest of the infrastructure assumed that they
@@ -232,12 +232,7 @@ managed to run an incredibly complex program, something like ``6 * 7``. That
 first bootstrapped version was really really slow, a couple of hundred times
 slower than CPython.
 
-
-.. XXX antocuni: are you sure this is correct? I have a vague remembering that
-   this is something which it happened at the first or second sprint I
-   participated to (so, after June 2006). But it is entirely possible that I
-   remember wrongly and what happenened is that someone of you told me about
-   this story at that time :)
+.. __: https://mail.python.org/pipermail/pypy-dev/2005-July/002239.html
 
 $$ image champagne
 
