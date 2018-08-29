@@ -742,6 +742,10 @@ to make it possible to run extensions. That this works at all remains completely
 amazing to me! But nowadays CPyExt is even getting quite good, a lot of the big
 numerical libraries such as Numpy and Pandas__ are now supported.
 
+.. XXX antocuni: However, calling CPyExt modules from PyPy is still very slow,
+   and we believe this is probably the biggest flaw which prevents massive
+   PyPy adoption, that's why we are working on it https://morepypy.blogspot.com/2017/10/cape-of-good-hope-for-pypy-hello-from.html
+
 .. _`CPython C-extension modules`: https://morepypy.blogspot.com/2010/04/using-cpython-extension-modules-with.html
 .. __: https://morepypy.blogspot.com/2017/10/pypy-v59-released-now-supports-pandas.html
 
@@ -831,7 +835,7 @@ gave essential early input when I just started planning the talk, and also gave
 feedback on the blog post. Maciej Fijałkowski gave me feedback on the post, in
 particular important insight about the more recent years of the project. Armin
 Rigo discussed the talk slides with me, and provided details about the early
-expectations about the first JIT's hoped-for performance. Anto Cuni gave
+expectations about the first JIT's hoped-for performance. Antonio Cuni gave
 substantial feedback and many very helpful suggestions for the blog post.
 $$$ more
 All remaining errors are of course my own.
