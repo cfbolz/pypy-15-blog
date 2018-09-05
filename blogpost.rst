@@ -741,13 +741,13 @@ implementation details, so we had to painstakingly emulate all of these details
 to make it possible to run extensions. That this works at all remains completely
 amazing to me! But nowadays CPyExt is even getting quite good, a lot of the big
 numerical libraries such as Numpy and Pandas__ are now supported.
-
-.. XXX antocuni: However, calling CPyExt modules from PyPy is still very slow,
-   and we believe this is probably the biggest flaw which prevents massive
-   PyPy adoption, that's why we are working on it https://morepypy.blogspot.com/2017/10/cape-of-good-hope-for-pypy-hello-from.html
+However, calling CPyExt modules from PyPy can still be very slow,
+which makes it impractical for some applications
+that's why we are working__ on it.
 
 .. _`CPython C-extension modules`: https://morepypy.blogspot.com/2010/04/using-cpython-extension-modules-with.html
 .. __: https://morepypy.blogspot.com/2017/10/pypy-v59-released-now-supports-pandas.html
+.. __: https://morepypy.blogspot.com/2017/10/cape-of-good-hope-for-pypy-hello-from.html
 
 Not thinking about C-extension module emulation earlier in the project history
 was a pretty bad strategic mistake. It had been clear for a long time that
