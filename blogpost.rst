@@ -134,8 +134,11 @@ PyPy continued to be developed on various subsequent sprints.
 
 From early on there was a very heavy emphasis on testing. All the parts of the
 interpreter that were implemented had a very careful set of unit tests to make
-sure that they worked correctly. At the sprints there was also an emphasis on
-doing pair programming to make sure that everybody understood the codebase
+sure that they worked correctly. From early on, there was a continuous
+integration infrastructure, which grew over time.
+
+At the sprints there was also an emphasis on doing pair programming to make
+sure that everybody understood the codebase
 equally. There was also a heavy emphasis on writing good code and on regularly
 doing refactorings to make sure that the codebase remained nice, clean and
 understandable. Those ideas followed from the early thoughts that PyPy would be
