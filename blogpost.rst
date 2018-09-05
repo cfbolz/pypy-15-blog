@@ -236,6 +236,18 @@ slower than CPython.
 
 $$ image champagne
 
+The bootstrapping process of RPython has a number of nice benefits, a big one
+being that a number of the properties of the generated virtual machine don't
+have to expressed in the interpreter. The biggest example of this is garbage
+collection. RPython is a garbage collected language, and the interpreter does
+not have to care much about GC in most cases. When the C source code is
+generated, a GC is automatically inserted. This is a source of great
+flexibility, indeed over time we experimented with a number of different GC
+approaches, from reference counting to Boehm__ to our current incremental
+generational collector.
+
+.. __: http://www.hboehm.info/gc/
+
 RPython's Modularity Problems
 --------------------------------
 
@@ -715,7 +727,7 @@ useful in a broader set of cases.
 .. _s390x: https://morepypy.blogspot.com/2016/04/pypy-enterprise-edition.html
 
 Another strand of work was to push quite significantly to be more
-compatible with CPython, particularly the Python 3 line as well as extenion
+compatible with CPython, particularly the Python 3 line as well as extension
 module support. Other compatibility improvements we did was making sure that
 virtualenv `works with PyPy`_, better support for distutils and setuptools and
 similar improvements. The continually improving performance as well better
@@ -837,5 +849,8 @@ particular important insight about the more recent years of the project. Armin
 Rigo discussed the talk slides with me, and provided details about the early
 expectations about the first JIT's hoped-for performance. Antonio Cuni gave
 substantial feedback and many very helpful suggestions for the blog post.
+Michael Hudson-Doyle also fixed a number of mistakes in the post and rightfully
+complained about the lack of mention of the GC. Christian Tismer provided
+access to his copy of early Python-de mailing list posts.
 $$$ more
 All remaining errors are of course my own.
