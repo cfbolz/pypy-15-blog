@@ -1,5 +1,5 @@
 The First 15 Years of PyPy — a Personal Retrospective
-========================================================
+=====================================================
 
 A few weeks ago I (=Carl Friedrich Bolz-Tereick) gave a keynote_ at ICOOOLPS in
 Amsterdam with the above title. I was very happy to have been given that
@@ -32,7 +32,7 @@ years, and it would be impossible to do them all justice.
 .. contents::
 
 2003: Starting the Project
-----------------------------
+--------------------------
 
 On the technical level PyPy is a Python interpreter written in Python, which is
 where the name comes from. It also has an automatically generated JIT compiler,
@@ -80,7 +80,7 @@ implementation, but I'll get to that further down.
 
 
 2003: Implementing the Interpreter
-------------------------------------
+----------------------------------
 
 In early 2003 a group of Python people met in Hildesheim (Germany) for the first
 of many week long development sprints, organized by Holger Krekel. During that
@@ -126,7 +126,7 @@ Here's the early code for integer addition::
 .. _implementations: https://bitbucket.org/pypy/pypy/src/090965df249b458918fbcbd0a407b40d2a3d29b4/pypy/objspace/std/intobject.py?at=default&fileviewer=file-view-default#intobject.py-561
 
 Early organizational ideas
------------------------------
+--------------------------
 
 Some of the early organizational ideas of the project were as follows. Since the
 project was started on a sprint and people really liked that style of working
@@ -159,7 +159,7 @@ here__).
 
 
 2004-2007: EU-Funding
-----------------------
+---------------------
 
 While all this coding was going on it became clear pretty soon that the goals
 that various participants had for the project would be very hard to achieve with
@@ -193,7 +193,7 @@ actually removed from the project again, at a `cleanup sprint`_).
 
 
 2005: Bootstrapping PyPy
-----------------------------
+------------------------
 
 So what were the actually useful things done as part of the EU project?
 
@@ -252,7 +252,7 @@ generational collector.
 .. __: http://www.hboehm.info/gc/
 
 RPython's Modularity Problems
---------------------------------
+-----------------------------
 
 Now we come to the first thing I would say we learned in the project, which is
 that the quality of tools we thought of as internal things still matters a lot.
@@ -282,7 +282,7 @@ did.
 
 
 2006: The Meta-JIT
--------------------
+------------------
 
 After successfully bootstrapping the VM we did some fairly straightforward
 optimizations on the interpreter and the C backend and managed to reduce the
@@ -322,7 +322,7 @@ $$ image from Psyco presentation at EuroPython 2002
 
 
 The First JIT Generator
-----------------------------
+-----------------------
 
 From early 2006 on until the end of the EU project a lot of work went into
 writing such a JIT generator. The idea was to base it on runtime partial
@@ -349,7 +349,7 @@ $$ image timeshifter
 
 
 Promote
---------
+-------
 
 One important ingredient of any JIT compiler is the ability to do runtime
 feedback. Runtime feedback is most commonly used to know something about which
@@ -365,7 +365,7 @@ into the compiler, whether they be types or other things.
 
 
 Virtuals
-----------
+--------
 
 Virtuals are a very aggressive form of `partial escape analysis`_. A dynamic
 language often puts a lot of pressure on the garbage collector, since most
@@ -391,7 +391,7 @@ evaluation systems since the 80s, because it's just extremely natural there.
 
 
 JIT Status 2007
------------------
+---------------
 
 So, back to our history. We're now in 2007, at the end of the EU project (you
 can find the EU-reports we wrote during the projects here_). The EU project
@@ -412,7 +412,7 @@ Psyco with the approach.
 
 
 2007: RSqueak and other languages
--------------------------------------
+---------------------------------
 
 After the EU project ended we did all kinds of things. Like sleep for a month
 for example, and have the cleanup sprint that I already mentioned. We also had a
@@ -462,7 +462,7 @@ called PyPy.". It just doesn't roll off the tongue as nicely.
 
 
 2008-2009: Four More JIT Generators
-------------------------------------
+-----------------------------------
 
 Back to the JIT. After writing the first JIT generator as part of the EU
 project, with somewhat mixed results, we actually wrote several more JIT
@@ -500,7 +500,7 @@ here’s a list of them.
 .. _`runtime partial evaluator for Prolog`: https://pdfs.semanticscholar.org/db2d/0542c7791ee6f29a9f35e3181a186866f881.pdf
 
 2009: Meta-Tracing
-----------------------
+------------------
 
 So, how did that tracing JIT generator work? A `tracing JIT`_ generates code by
 observing and logging the execution of the running program. This yields a
@@ -550,7 +550,7 @@ decisions by changing the annotations in the interpreter source.
 
 
 2009-2011: The PyJIT Eurostars Project
--------------------------------------------
+--------------------------------------
 
 While we were writing all these JIT prototypes, PyPy had sort of reverted back
 to being a volunteer-driven open source project (although some of us, like
@@ -567,7 +567,7 @@ specifically for JIT development and JIT testing infrastructure.
 
 
 Tracing JIT improvements
-------------------------------
+------------------------
 
 When writing the grant we had sat together at a sprint and discussed extensively
 and decided that we would not switch JIT generation approaches any more. We all
@@ -590,7 +590,7 @@ compiler optimizations for the meta-tracing JIT, such as:
 
 
 2010: speed.pypy.org
-----------------------
+--------------------
 
 In 2010, to make sure that we wouldn't accidentally introduce speed regressions
 while working on the JIT, we implemented infrastructure to build PyPy and run
@@ -602,7 +602,7 @@ next years, to keep continually improving performance.
 
 
 Continuous Integration
------------------------
+----------------------
 
 This actually leads me to something else that I'd say we learned, which is that
 continuous integration is really awesome, and completely transformative to have
@@ -630,7 +630,7 @@ This concludes my advertisement for testing in this post.
 
 
 2010: Implementing Python Objects with Maps
------------------------------------------------
+-------------------------------------------
 
 So, what else did we do in the Eurostars project, apart from adding traditional
 compiler optimizations to the tracing JIT and setting up CI infrastructure?
@@ -652,7 +652,7 @@ instance attribute access and makes instances use a lot less memory.
 
 
 2011: Container Storage Strategies
---------------------------------------
+----------------------------------
 
 Another important change in the PyPy runtime was rewriting the Python container
 data structures, such as lists, dictionaries and sets. A fairly straightforward
@@ -674,7 +674,7 @@ practice. A lot of that work was done by Lukas Diekmann.
 
 
 Deep Changes in the Runtime are Necessary
--------------------------------------------
+-----------------------------------------
 
 These two are just two examples for a number of fairly fundamental changes in
 the PyPy runtime and PyPy data structures, probably the two most important ones,
@@ -694,7 +694,7 @@ away". That never works very well.
 
 
 JIT Status 2011
---------------------
+---------------
 
 So, the Eurostars project has ended, what's the status of the JIT? Well, it
 seems this meta-tracing stuff really works! We finally started actually
@@ -708,7 +708,7 @@ Eurostars, we were about 4x faster than CPython on our set of benchmarks.
 
 
 2012-2017: Engineering and Incremental Progress
---------------------------------------------------
+-----------------------------------------------
 
 2012 the Eurostars project was finished and PyPy reverted yet another time back
 to be an open source project. From then on, we've had a more diverse set of
@@ -743,7 +743,7 @@ industry__.
 .. _`works with PyPy`: https://morepypy.blogspot.com/2010/08/using-virtualenv-with-pypy.html
 
 CPyExt
----------
+------
 
 Another very important strand of work that took a lot of effort in recent years
 was CPyExt. One of the main blockers of PyPy adoption had always been the fact
@@ -778,7 +778,7 @@ of emulation was going to be practical, until somebody `went and tried it`__.
 
 
 Python 3
----------
+--------
 
 Another main
 focus of the last couple of years has been to catch up with the CPython 3 line.
@@ -792,7 +792,7 @@ have to look into 3.7 in the near future.
 
 
 Incentives of OSS compared to Academia
-------------------------------------------------------
+--------------------------------------
 
 So, what can be learned from those more recent years? One thing we can observe
 is that a lot of the engineering work we did in that time is not really science
@@ -808,7 +808,7 @@ source work, both within and outside of academia.
 
 
 Meta-Tracing really works!
-------------------------------
+--------------------------
 
 Let me end with what's in my mind the main positive technical result of PyPy the
 project. Which is that the whole idea of using a meta-tracing JIT can really
@@ -842,7 +842,7 @@ $$$ images
 
 
 Acknowledgements
-----------------------
+----------------
 
 A lot of people helped me with this blog post. Tim Felgentreff made me give the
 keynote, which lead me to start collecting the material. Samuele Pedroni
