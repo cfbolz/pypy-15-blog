@@ -187,13 +187,14 @@ leisurely project people worked on for fun. But afterwards people discovered
 that doing this kind of work full time becomes slightly less fun, particularly
 also if you have to fulfill the ambitious technical goals that the EU proposal
 contained. And the proposal indeed contained a bit everything to increase its
-chance of acceptance, such as aspect oriented programming, semantic web, logic
+chance of acceptance, such as `aspect oriented programming`_, semantic web, logic
 programming, constraint programming, and so on. Unfortunately it
 turned out that those things then have to be implemented, which can be called
 the first thing we learned: if you promise something to the EU, you'll have to
 actually go do it (After the funding ended, a lot of these features were
 actually removed from the project again, at a `cleanup sprint`_).
 
+.. _`aspect oriented programming`: https://en.wikipedia.org/wiki/Aspect-oriented_programming
 .. _`cleanup sprint`: https://morepypy.blogspot.com/2007/11/sprint-pictures.html
 
 
@@ -213,9 +214,9 @@ interpreter should only use that subset, of course.
 
 .. _Squeak: http://wiki.squeak.org/squeak
 
-The main difference to the Squeak approach is that Slang, the subset of Squeak
+The main difference from the Squeak approach is that Slang, the subset of Squeak
 used there, is actually quite a low level language. In a way, you could almost
-describe it as C with Smalltalk syntax. And RPython was really meant to be a
+describe it as C with Smalltalk syntax. RPython was really meant to be a
 much higher level language, much closer to Python, with full support for single
 inheritance classes, and most of Python's built-in data structures.
 
@@ -232,7 +233,7 @@ project as a volunteer.
 
 And at the second sprint I went to, in July 2005, two and a half years after the
 project got started, we managed to bootstrap__ the PyPy interpreter to C for the
-first time. And then when we ran the compiled program, it of course immediately
+first time. When we ran the compiled program, it of course immediately
 segfaulted. The reason for that was that the C backend had turned characters
 into signed chars in C, while the rest of the infrastructure assumed that they
 were unsigned chars. After we fixed that, the second attempt worked and we
@@ -250,7 +251,7 @@ have to expressed in the interpreter. The biggest example of this is garbage
 collection. RPython is a garbage collected language, and the interpreter does
 not have to care much about GC in most cases. When the C source code is
 generated, a GC is automatically inserted. This is a source of great
-flexibility, indeed over time we experimented with a number of different GC
+flexibility. Over time we experimented with a number of different GC
 approaches, from reference counting to Boehm__ to our current incremental
 generational collector.
 
@@ -283,7 +284,7 @@ Of course this mistake just got more and more costly to fix over time,
 and so it means that so far nobody has actually done it. 
 Not thinking more carefully about RPython's design, particularly its
 modularity story, is in my opinion the biggest technical mistake the project
-did.
+made.
 
 
 2006: The Meta-JIT
@@ -378,9 +379,9 @@ primitive types (like integers, floats and strings) are boxed in the heap, and
 new boxes are allocated all the time.
 
 With the help of virtuals a very significant portion of all allocations in the
-generated machine code can be removed fully. And even if they can't be removed
-fully, often the allocation can be delayed, or moved into an error path or even
-into a deoptimization_ path and thus disappear from the generated machine code
+generated machine code can be compeltely removed. Even if they can't be removed,
+often the allocation can be delayed or moved into an error path, or even
+into a deoptimization_ path, and thus disappear from the generated machine code
 completely.
 
 .. _`partial escape analysis`: http://www.ssw.uni-linz.ac.at/Research/Papers/Stadler14/Stadler2014-CGO-PEA.pdf
@@ -388,7 +389,7 @@ completely.
 
 This optimization really is the super-power of PyPy's optimizer, since it
 doesn't work only for primitive boxes but for any kind of object allocated on
-the heap with predictable lifetime.
+the heap with a predictable lifetime.
 
 As an aside, while this kind of partial escape analysis is sort of new for
 object-oriented languages, it has actually existed in Prolog-based partial
@@ -401,7 +402,7 @@ JIT Status 2007
 So, back to our history. We're now in 2007, at the end of the EU project (you
 can find the EU-reports we wrote during the projects here_). The EU project
 successfully finished, we survived the final review with the EU. So, what's the
-status of the JIT generator? It works kind of, it can be applied to PyPy. It
+2007 status of the JIT generator? It works kind of, it can be applied to PyPy. It
 produces a VM with a JIT that will turn Python code into machine code at runtime
 and run it. However, that machine code is not particularly fast. Also, it tends
 to generate many megabytes of machine code even for small Python programs. While
@@ -440,7 +441,7 @@ The development of the Squeak interpreter was very interesting for the project,
 because it was the first real step that moved RPython from being an
 implementation detail of PyPy to be a more interesting project in its own right.
 Basically a language to write interpreters in, with the eventual promise to get
-a JIT for that language sort of for free. That Squeak implementation is now
+a JIT for that language almost for free. That Squeak implementation is now
 called RSqueak_ ("Research Squeak").
 
 .. _`Software Composition Group`: http://scg.unibe.ch/
@@ -551,7 +552,8 @@ loop or not: If the called function contains a loop, we'll never inline it, if
 it doesn't we always try to inline it. That predictability is actually what was
 the most helpful, since it makes it possible for interpreter authors to
 understand why the JIT did what it did and to actually influence its inlining
-decisions by changing the annotations in the interpreter source.
+decisions by changing the annotations in the interpreter source. It turns out
+that simple is better than complex.
 
 
 2009-2011: The PyJIT Eurostars Project
@@ -640,7 +642,7 @@ This concludes my advertisement for testing in this post.
 So, what else did we do in the Eurostars project, apart from adding traditional
 compiler optimizations to the tracing JIT and setting up CI infrastructure?
 Another strand of work, that went on sort of concurrently to the JIT generator
-improvements were deep rewrites in the Python runtime, and the Python data
+improvements, were deep rewrites in the Python runtime, and the Python data
 structures. I am going to write about two exemplary ones here.
 
 The first such rewrite is fairly standard. Python instances are similar to
@@ -701,7 +703,7 @@ away". That never works very well.
 JIT Status 2011
 ---------------
 
-So, the Eurostars project has ended, what's the status of the JIT? Well, it
+So, here we are at the end of the Eurostars project, what's the status of the JIT? Well, it
 seems this meta-tracing stuff really works! We finally started actually
 believing in it, when we reached the point in 2010 where self-hosting PyPy was
 actually faster__ than bootstrapping the VM on CPython. Speeding up the
@@ -719,7 +721,7 @@ Eurostars, we were about 4x faster than CPython on our set of benchmarks.
 to be an open source project. From then on, we've had a more diverse set of
 sources of funding: we received some crowd funding via the `Software Freedom
 Conservancy`_ and contracts of various sizes from companies to implement various
-specific features, often handled by Baroque Software. So in the next couple of
+specific features, often handled by Baroque Software. Over the next couple of
 years
 we revamped various parts of the VM. We improved the GC in major_ ways. We
 optimized the implementation of the JIT compiler to improve warmup_ times_. We
@@ -815,7 +817,7 @@ source work, both within and outside of academia.
 Meta-Tracing really works!
 --------------------------
 
-Let me end with what's in my mind the main positive technical result of PyPy the
+Let me end with what, in my opinion, is the main positive technical result of PyPy the
 project. Which is that the whole idea of using a meta-tracing JIT can really
 work! Currently PyPy is about 7 times faster than CPython on a broad set of
 benchmarks. Also, one of the very early motivations for using a meta-jitting
@@ -844,6 +846,8 @@ $$$ images
    from the first to the last commit. Both versions should do a good job at
    showing that we had different bursts of activity (especially during the
    founding periods)
+
+... XXX mattip: https://www.openhub.net/p/pypy
 
 
 Acknowledgements
