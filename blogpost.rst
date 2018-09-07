@@ -137,6 +137,11 @@ interpreter that were implemented had a very careful set of unit tests to make
 sure that they worked correctly. From early on, there was a continuous
 integration infrastructure, which grew over time.
 
+.. XXX antocuni what about this: nowadays it is very natural for people to
+   have automated tests, and the concept of green/red builds: but embracing
+   this workflow in early 2000s was now mainstream at all, and it is probably
+   one of the reasons behind PyPy's success.
+
 At the sprints there was also an emphasis on doing pair programming to make
 sure that everybody understood the codebase
 equally. There was also a heavy emphasis on writing good code and on regularly
