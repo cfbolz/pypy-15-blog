@@ -263,7 +263,7 @@ flexibility. Over time we experimented with a number of different GC
 approaches, from reference counting to Boehm__ to our current incremental
 generational collector. As an aside, for a long time we were also working on
 other backends to the RPython language and hoped to be able to target Java and
-.NET as well. Eventually we gave up on this strand of work, however.
+.NET as well. Eventually we abandoned this strand of work, however.
 
 .. __: http://www.hboehm.info/gc/
 
