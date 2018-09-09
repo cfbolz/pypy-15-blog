@@ -101,14 +101,18 @@ There's not going to be any other code in this post, but to give a bit of a
 flavor of what the Python interpreter at that time looked like, here's the
 implementation of the ``DUP_TOP`` bytecode after these first sprints. As you can
 see, it's in Python, obviously, and it has high level constructs such as method
-calls to do the stack manipulations::
+calls to do the stack manipulations:
+
+.. code:: python
 
     def DUP_TOP(f):
         w_1 = f.valuestack.top()
         f.valuestack.push(w_1)
 
 
-Here's the early code for integer addition::
+Here's the early code for integer addition:
+
+.. code:: python
 
     def int_int_add(space, w_int1, w_int2):
         x = w_int1.intval
