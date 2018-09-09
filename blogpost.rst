@@ -614,7 +614,7 @@ Continuous Integration
 This actually leads me to something else that I'd say we learned, which is that
 continuous integration is really awesome, and completely transformative to have
 for a project. This is not a particularly surprising insight nowadays in the
-open source community, it's easy to set up continuous integration on github
+open source community, it's easy to set up continuous integration on Github
 using Travis or some other CI service. But I still see a lot of research
 projects that don't have tests, that don't use CI, so I wanted to mention it
 anyway. As I mentioned earlier in the post, PyPy has a quite serious testing
@@ -758,7 +758,7 @@ that a lot of people need specific C-extension modules at least in some parts of
 their program, and telling them to reimplement everything in Python is just not
 a practical solution. Therefore we worked on CPyExt, an emulation layer  to make
 it possible to run `CPython C-extension modules`_ in PyPy. Doing that was a very
-painful process, since the CPython extension API leaks a lot of CPython
+`painful process`__, since the CPython extension API leaks a lot of CPython
 implementation details, so we had to painstakingly emulate all of these details
 to make it possible to run extensions. That this works at all remains completely
 amazing to me! But nowadays CPyExt is even getting quite good, a lot of the big
@@ -768,6 +768,7 @@ which makes it impractical for some applications
 that's why we are working__ on it.
 
 .. _`CPython C-extension modules`: https://morepypy.blogspot.com/2010/04/using-cpython-extension-modules-with.html
+.. __: https://www.youtube.com/watch?v=qH0eeh-4XE8
 .. __: https://morepypy.blogspot.com/2017/10/pypy-v59-released-now-supports-pandas.html
 .. __: https://morepypy.blogspot.com/2017/10/cape-of-good-hope-for-pypy-hello-from.html
 
