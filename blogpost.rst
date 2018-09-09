@@ -85,7 +85,7 @@ implementation, but I'll get to that further down.
 In early 2003 a group of Python people met in Hildesheim (Germany) for the first
 of many week long development sprints, organized by Holger Krekel. During that
 week a group of people showed up and started working on the core interpreter.
-May 2003 a second sprint was organized by Laura Creighton and Jacob Halén in
+In May 2003 a second sprint was organized by Laura Creighton and Jacob Halén in
 Gothenburg (Sweden). And already at that sprint enough of the Python bytecodes
 and data structures were implemented to make it possible to run a program that
 computed how much money everybody had to pay for the food bills of the week. And
@@ -137,12 +137,10 @@ PyPy continued to be developed on various subsequent sprints__.
 From early on there was a very heavy emphasis on testing. All the parts of the
 interpreter that were implemented had a very careful set of unit tests to make
 sure that they worked correctly. From early on, there was a continuous
-integration infrastructure, which grew over time.
-
-.. XXX antocuni what about this: nowadays it is very natural for people to
-   have automated tests, and the concept of green/red builds: but embracing
-   this workflow in early 2000s was now mainstream at all, and it is probably
-   one of the reasons behind PyPy's success.
+integration infrastructure, which grew over time (nowadays it is very natural
+for people to have automated tests, and the concept of green/red builds: but
+embracing this workflow in the early 2000s was not really mainstream yet, and
+it is probably one of the reasons behind PyPy's success).
 
 At the sprints there was also an emphasis on doing pair programming to make
 sure that everybody understood the codebase
