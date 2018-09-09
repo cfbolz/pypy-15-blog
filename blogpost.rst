@@ -658,7 +658,8 @@ So, what else did we do in the Eurostars project, apart from adding traditional
 compiler optimizations to the tracing JIT and setting up CI infrastructure?
 Another strand of work, that went on sort of concurrently to the JIT generator
 improvements, were deep rewrites in the Python runtime, and the Python data
-structures. I am going to write about two exemplary ones here.
+structures. I am going to write about two exemplary ones here, maps and storage
+strategies.
 
 The first such rewrite is fairly standard. Python instances are similar to
 Javascript objects, in that you can add arbitrary attributes to them at runtime.
@@ -876,3 +877,5 @@ access to his copy of early Python-de mailing list posts. Matti Picus pointed
 out a number of things I had forgotten and fixed a huge number of typos and
 awkward English, including my absolute inability to put commas correctly.
 All remaining errors are of course my own.
+
+**update:** fixed confusing wording in the maps section.
