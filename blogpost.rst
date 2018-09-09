@@ -854,6 +854,8 @@ expectations about the first JIT's hoped-for performance. Antonio Cuni gave
 substantial feedback and many very helpful suggestions for the blog post.
 Michael Hudson-Doyle also fixed a number of mistakes in the post and rightfully
 complained about the lack of mention of the GC. Christian Tismer provided
-access to his copy of early Python-de mailing list posts.
+access to his copy of early Python-de mailing list posts. Matti Picus pointed
+out a number of things I had forgotten and fixed a huge number of typos and
+awkward English, including my absolute inability to put commas correctly.
 $$$ more
 All remaining errors are of course my own.
