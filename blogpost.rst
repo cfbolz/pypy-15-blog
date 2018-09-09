@@ -835,20 +835,10 @@ structure the interpreter and that it can be applied to languages of quite
 different paradigms.
 
 I'll end with a list of the people that have contributed code to PyPy over its
-history, more than 350 of them. I'd like to thank all of them and the various
+history__, more than 350 of them. I'd like to thank all of them and the various
 roles they played. To the next 15 years!
 
-$$$ images
-
-.. XXX antocuni: what about a sort of "timeline chart"? On the X axis, the
-   time; on the Y axis, the committers; then, we draw one point for each
-   commit (or maybe bigger points for many commits in the same day/week/month
-   or so). Or, alternatively: for each committer, one straight line which goes
-   from the first to the last commit. Both versions should do a good job at
-   showing that we had different bursts of activity (especially during the
-   founding periods)
-
-... XXX mattip: https://www.openhub.net/p/pypy
+.. __: https://www.openhub.net/p/pypy
 
 
 Acknowledgements
