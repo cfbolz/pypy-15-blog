@@ -253,7 +253,9 @@ not have to care much about GC in most cases. When the C source code is
 generated, a GC is automatically inserted. This is a source of great
 flexibility. Over time we experimented with a number of different GC
 approaches, from reference counting to Boehm__ to our current incremental
-generational collector.
+generational collector. As an aside, for a long time we were also working on
+other backends to the RPython language and hoped to be able to target Java and
+.NET as well. Eventually we gave up on this strand of work, however.
 
 .. __: http://www.hboehm.info/gc/
 
@@ -762,7 +764,9 @@ it possible to run `CPython C-extension modules`_ in PyPy. Doing that was a very
 implementation details, so we had to painstakingly emulate all of these details
 to make it possible to run extensions. That this works at all remains completely
 amazing to me! But nowadays CPyExt is even getting quite good, a lot of the big
-numerical libraries such as Numpy and Pandas__ are now supported.
+numerical libraries such as Numpy and Pandas__ are now supported (for a while
+we had worked hard on a reimplementation of Numpy called NumPyPy, but
+eventually realized that it would never be complete and useful enough).
 However, calling CPyExt modules from PyPy can still be very slow,
 which makes it impractical for some applications
 that's why we are working__ on it.
