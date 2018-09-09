@@ -171,14 +171,18 @@ that various participants had for the project would be very hard to achieve with
 just open source volunteers working on the project in their spare time.
 Particularly also the sprints became expensive given that those were just
 volunteers doing this as a kind of weird hobby. Therefore a couple of people of
-the project got together to apply for an EU grant in the framework programme 6
+the project got together to apply for an EU grant in the `framework programme 6`__
 to solve these money problems. In mid-2004 that application proved to be
 successful. And so the project got a grant of a 1.3 million Euro for
 two years to be able to employ some of the core developers and to make it
 possible for them work on the project full time. The EU grant went to seven
-small-to-medium companies and Uni Düsseldorf. The budget also contained money to
+small-to-medium companies and `Uni Düsseldorf`_. The budget also contained money to
 fund sprints, both for the employed core devs as well as other open source
 contributors.
+
+.. _`Uni Düsseldorf`: https://hhu.de
+
+.. __: https://en.wikipedia.org/wiki/Framework_Programmes_for_Research_and_Technological_Development#FP6_and_FP7
 
 The EU project started in December 2004 and that was a fairly heavy change in
 pace for the project. Suddenly a lot of people were working full time on it, and
@@ -414,7 +418,7 @@ still an amazing achievement! It's arguably the biggest application of partial
 evaluation at this point in time! On the other hand, it was still quite 
 disappointing in practice, particularly since some of us had believed at the
 time that it should have been possible to reach and then surpass the speed of
-Psyco with the approach.
+Psyco with this approach.
 
 .. _here: http://doc.pypy.org/en/latest/index-report.html
 
@@ -493,7 +497,8 @@ here’s a list of them.
   guessing which path would actually be useful later when executing the code.
   This was an attempt to reduce the problem of the first JIT generating way too
   much machine code. Only later, when execution went down one of the not yet
-  compiled paths would it continue compiling more code.
+  compiled paths would it continue compiling more code. This gives an effect
+  similar to that of `lazy basic block versioning`_.
 
 - The fourth JIT generator was a pretty strange prototype, a `runtime partial
   evaluator for Prolog`_, to experiment with various specialization trade-offs. It
@@ -505,6 +510,7 @@ here’s a list of them.
   generating a tracing JIT compiler. Tracing JIT compilers were sort of the
   latest fashion at the time, at least for a little while.
 
+.. _`lazy basic block versioning`: https://arxiv.org/abs/1411.0352
 .. _`runtime partial evaluator for Prolog`: https://pdfs.semanticscholar.org/db2d/0542c7791ee6f29a9f35e3181a186866f881.pdf
 
 2009: Meta-Tracing
@@ -536,7 +542,7 @@ features in the meta-tracing context). 
 Why did we Abandon Partial Evaluation?
 --------------------------------------
 
-So one question I get asked quite regularly when telling this story is, why did
+So one question I get sometimes asked when telling this story is, why did
 we think that tracing would work better than partial evaluation (PE)? One of the
 hardest parts of compilers in general and partial evaluation based systems in
 particular is the decision when and how much to inline, how much to specialize,
@@ -568,9 +574,12 @@ members had other sources of funding). But again, while we did the work it
 became clear that to get an actually working fast PyPy with generated JIT we
 would need actual funding again for the project. So we applied to the EU again,
 this time for a much smaller project with less money, in the Eurostars_
-framework. We got a grant for three participants, merlinux, OpenEnd and Uni
+framework. We got a grant for three participants, merlinux_, OpenEnd_ and Uni
 Düsseldorf, on the order of a bit more than half a million euro. That money was
 specifically for JIT development and JIT testing infrastructure.
+
+.. _merlinux: http://merlinux.eu/
+.. _OpenEnd: https://www.openend.se/
 
 .. _Eurostars: https://morepypy.blogspot.com/2010/12/oh-and-btw-pypy-gets-funding-through.html
 
@@ -723,7 +732,7 @@ Eurostars, we were about 4x faster than CPython on our set of benchmarks.
 to be an open source project. From then on, we've had a more diverse set of
 sources of funding: we received some crowd funding via the `Software Freedom
 Conservancy`_ and contracts of various sizes from companies to implement various
-specific features, often handled by Baroque Software. Over the next couple of
+specific features, often handled by `Baroque Software`_. Over the next couple of
 years
 we revamped various parts of the VM. We improved the GC in major_ ways. We
 optimized the implementation of the JIT compiler to improve warmup_ times_. We
@@ -732,6 +741,7 @@ s390x_). We tried to reduce the number of performance cliffs and make the JIT
 useful in a broader set of cases.
 
 .. _`Software Freedom Conservancy`: https://sfconservancy.org/
+.. _`Baroque Software`: https://baroquesoftware.com/
 .. _major: https://morepypy.blogspot.com/2013/10/incremental-garbage-collector-in-pypy.html
 .. _warmup: https://morepypy.blogspot.com/2015/10/pypy-memory-and-warmup-improvements-2.html
 .. _times: https://morepypy.blogspot.com/2016/04/warmup-improvements-more-efficient.html
@@ -796,7 +806,7 @@ Another main
 focus of the last couple of years has been to catch up with the CPython 3 line.
 Originally we had ignored Python 3 for a little bit too long, and were trailing
 several versions behind. In 2016 and 2017 we had a grant_ from the Mozilla open
-source support program of $200000 to be able to catch up with Python 3.5. This
+source support program of $200'000 to be able to catch up with Python 3.5. This
 work is now basically done, and we are starting to target CPython 3.6 and will
 have to look into 3.7 in the near future.
 
@@ -861,5 +871,4 @@ complained about the lack of mention of the GC. Christian Tismer provided
 access to his copy of early Python-de mailing list posts. Matti Picus pointed
 out a number of things I had forgotten and fixed a huge number of typos and
 awkward English, including my absolute inability to put commas correctly.
-$$$ more
 All remaining errors are of course my own.
