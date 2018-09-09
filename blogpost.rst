@@ -374,7 +374,7 @@ primitive types (like integers, floats and strings) are boxed in the heap, and
 new boxes are allocated all the time.
 
 With the help of virtuals a very significant portion of all allocations in the
-generated machine code can be compeltely removed. Even if they can't be removed,
+generated machine code can be completely removed. Even if they can't be removed,
 often the allocation can be delayed or moved into an error path, or even
 into a deoptimization_ path, and thus disappear from the generated machine code
 completely.
