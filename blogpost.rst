@@ -130,7 +130,9 @@ Early organizational ideas
 
 Some of the early organizational ideas of the project were as follows. Since the
 project was started on a sprint and people really liked that style of working
-PyPy continued to be developed on various subsequent sprints.
+PyPy continued to be developed on various subsequent sprints__.
+
+.. __: https://www.youtube.com/watch?v=ed-zAxZtGlY
 
 From early on there was a very heavy emphasis on testing. All the parts of the
 interpreter that were implemented had a very careful set of unit tests to make
